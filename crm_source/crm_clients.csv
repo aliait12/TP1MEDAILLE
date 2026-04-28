@@ -1,0 +1,11 @@
+crm_client_id,nom,email,telephone,ville,segment,date_inscription
+1,Ahmed Benali,ahmed.benali@gmail.com,0612345678,Casablanca,VIP,2023-01-15
+2,Sara Idrissi,sara.idrissi@outlook.com,0698765432,Rabat,Standard,2023-03-20
+3,Youssef Alami,youssef.alami@gmail.com,0661234567,Marrakech,VIP,2022-11-05
+4,Fatima Zahra,fatima.zahra@yahoo.fr,0677889900,Fes,Standard,2023-06-10
+5,Khalid Mansouri,khalid.mansouri@gmail.com,0655443322,Tanger,Premium,2022-08-22
+6,Nadia Chraibi,nadia.chraibi@hotmail.com,0633221100,Casablanca,VIP,2023-02-14
+7,Omar Tahiri,omar.tahiri@gmail.com,0644556677,Agadir,Standard,2023-07-30
+8,Leila Bousaid,leila.bousaid@gmail.com,0622334455,Rabat,Premium,2022-12-01
+9,Hassan Ouali,hassan.ouali@outlook.com,0688990011,Meknes,Standard,2023-04-18
+10,Imane Rachidi,imane.rachidi@gmail.com,0611223344,Casablanca,VIP,2023-05-25

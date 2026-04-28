@@ -1,0 +1,32 @@
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql 
+      - ./crm_source:/var/lib/mysql-files/crm_source  # CSV CRM
+      - ./erp_source:/var/lib/mysql-files/erp_source  # CSV ERP
+    command: --secure-file-priv=/var/lib/mysql-files --local-infile=1
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 0
+
+volumes:
+  mysql_data:

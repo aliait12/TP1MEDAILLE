@@ -1,0 +1,11 @@
+erp_product_id,designation,categorie_stock,prix_achat,prix_vente,stock
+101,Laptop HP 15,Informatique,3800.00,5500.00,25
+102,Smartphone Samsung A54,Téléphonie,2100.00,3200.00,50
+103,Tablette iPad 10,Informatique,3200.00,4800.00,18
+104,Casque Sony WH-1000XM5,Audio,1100.00,1800.00,30
+105,Clavier Logitech MX Keys,Accessoires,380.00,650.00,60
+106,Souris Logitech MX Master,Accessoires,270.00,480.00,75
+107,Écran Dell 27 pouces,Informatique,1400.00,2200.00,20
+108,Disque SSD 1To Samsung,Stockage,420.00,750.00,80
+109,Imprimante HP LaserJet,Bureautique,850.00,1400.00,15
+110,Webcam Logitech C920,Accessoires,300.00,550.00,45

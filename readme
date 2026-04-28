@@ -1,0 +1,63 @@
+Bronze — 6 tables de données brutes chargées depuis les CSV 
+CRM et ERP via LOAD DATA INFILE
+Silver — 3 tables nettoyées (customers_clean, products_clean, orders_clean) 
+avec transformations 
+TRIM, LOWER, UPPER, et fusion des deux sources
+Gold — Schéma en étoile avec fact_ventes (15 lignes), 
+dim_client, dim_produit, dim_date, et les calculs Revenue / Cost / Profit
+
+Bronze = copie brute des CSV tels quels, séparés par source:
+crm_clients_raw   ←— CSV CRM
+erp_clients_raw   ←— CSV ERP
+(2 tables qui ne se connaissent pas)
+Silver = on nettoie + on réunit tout dans une seule table:
+customers_clean   ←— CRM + ERP ensemble
+(1 seule table avec colonne source_system = 'CRM' ou 'ERP')
+Gold = on restructure pour l'analyse (schéma étoile)
+dim_client + fact_ventes   ←— prêt pour les rapports
+(calculs revenue, cost, profit déjà faits)
+
+role de docker:
+Et c'est tout — MySQL tourne immédiatement, configuré, isolé.
+1. Il fait tourner MySQL
+
+ton PC  →  Docker  →  MySQL (conteneur)
+=>Docker = XAMPP mais en version professionnelle
+
+explication des commandes :
+
+# Démarrer les conteneurs
+docker compose up -d
+
+# Vérifier que tout tourne
+docker ps
+
+# Envoyer les scripts SQL à MySQL
+Get-Content sql\01_bronze.sql | docker exec -i mysql mysql -u root -proot
+Get-Content sql\02_silver.sql | docker exec -i mysql mysql -u root -proot
+Get-Content sql\03_gold.sql   | docker exec -i mysql mysql -u root -proot
+```
+
+---
+
+**Ce que fait chaque commande :**
+
+| Commande | Rôle |
+|---|---|
+| `docker compose up -d` | Démarre MySQL + phpMyAdmin en arrière-plan |
+| `docker ps` | Liste les conteneurs qui tournent |
+| `docker exec -i mysql` | Entre dans le conteneur MySQL |
+| `mysql -u root -proot` | Se connecte à MySQL avec le mot de passe |
+| `Get-Content fichier \|` | Envoie le contenu du fichier SQL à MySQL |
+
+---
+
+En gros ton workflow était :
+```
+docker-compose.yml
+      ↓
+docker compose up -d  →  MySQL tourne
+      ↓
+Get-Content *.sql     →  Bases créées (Bronze, Silver, Gold)
+      ↓
+localhost:8080        →  phpMyAdmin pour visualiser

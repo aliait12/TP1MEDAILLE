@@ -1,0 +1,11 @@
+crm_product_id,nom_produit,categorie,prix_catalogue
+101,Laptop HP 15,Informatique,5500.00
+102,Smartphone Samsung A54,Téléphonie,3200.00
+103,Tablette iPad 10,Informatique,4800.00
+104,Casque Sony WH-1000XM5,Audio,1800.00
+105,Clavier Logitech MX Keys,Accessoires,650.00
+106,Souris Logitech MX Master,Accessoires,480.00
+107,Écran Dell 27 pouces,Informatique,2200.00
+108,Disque SSD 1To Samsung,Stockage,750.00
+109,Imprimante HP LaserJet,Bureautique,1400.00
+110,Webcam Logitech C920,Accessoires,550.00

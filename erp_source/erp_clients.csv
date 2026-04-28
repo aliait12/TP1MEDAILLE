@@ -1,0 +1,11 @@
+erp_client_id,nom,ice,ville,pays,date_creation
+C001,Ahmed Benali,001234567000012,Casablanca,Maroc,2023-01-10
+C002,Sara Idrissi,007654321000034,Rabat,Maroc,2023-03-18
+C003,Youssef Alami,002345678000056,Marrakech,Maroc,2022-11-01
+C004,Fatima Zahra,008765432000078,Fes,Maroc,2023-06-05
+C005,Khalid Mansouri,003456789000090,Tanger,Maroc,2022-08-20
+C006,Nadia Chraibi,009876543000012,Casablanca,Maroc,2023-02-10
+C007,Omar Tahiri,004567890000034,Agadir,Maroc,2023-07-28
+C008,Leila Bousaid,000987654000056,Rabat,Maroc,2022-11-28
+C009,Hassan Ouali,005678901000078,Meknes,Maroc,2023-04-15
+C010,Imane Rachidi,001098765000090,Casablanca,Maroc,2023-05-20
